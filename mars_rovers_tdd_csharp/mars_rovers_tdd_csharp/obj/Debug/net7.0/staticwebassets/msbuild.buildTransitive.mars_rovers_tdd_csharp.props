@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\mars_rovers_tdd_csharp.props" />
+</Project>
