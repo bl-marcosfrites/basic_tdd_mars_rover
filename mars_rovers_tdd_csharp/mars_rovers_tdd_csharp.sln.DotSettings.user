@@ -1,5 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f28b948_002De2bc_002D4864_002Db067_002Dbc887b255151/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test01_getPosition #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f28b948_002De2bc_002D4864_002Db067_002Dbc887b255151/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test01_getPosition #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::534294B3-8619-48B7-A628-7069D0B78303::net7.0::mars_rovers_tdd_csharp.test.models.MarsRoverTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
@@ -14,7 +14,7 @@
     &lt;TestId&gt;xUnit::534294B3-8619-48B7-A628-7069D0B78303::net7.0::mars_rovers_tdd_csharp.test.models.MarsRoverTest.Test01_getPosition&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bf6af2a8_002De343_002D49ea_002Da646_002Dca5aab5f8d9c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MarsRoverTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bf6af2a8_002De343_002D49ea_002Da646_002Dca5aab5f8d9c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MarsRoverTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::534294B3-8619-48B7-A628-7069D0B78303::net7.0::mars_rovers_tdd_csharp.test.models.MarsRoverTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
