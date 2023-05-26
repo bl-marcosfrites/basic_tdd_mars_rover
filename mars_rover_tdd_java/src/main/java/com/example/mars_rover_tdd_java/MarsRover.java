@@ -2,9 +2,10 @@ package com.example.mars_rover_tdd_java;
 
 public class MarsRover {
 
-    public int x;
-    public int y;
-    public String direction;
+    static final String UNEXPECTED_ERROR = "Unexpected value: ";
+    private int x;
+    private int y;
+    private String direction;
 
     public MarsRover(int x, int y, String direction) {
         this.x = x;
@@ -41,7 +42,7 @@ public class MarsRover {
             case "b" -> moveBackward(this.direction);
             case "l" -> turnLeft(this.direction);
             case "r" -> turnRight(this.direction);
-            default -> throw new IllegalStateException("Unexpected value: " + movement);
+            default -> throw new IllegalStateException(UNEXPECTED_ERROR + movement);
         }
     }
 
@@ -51,7 +52,7 @@ public class MarsRover {
             case "W" -> this.direction = "S";
             case "S" -> this.direction = "E";
             case "E" -> this.direction = "N";
-            default -> throw new IllegalStateException("Unexpected value: " + direction);
+            default -> throw new IllegalStateException(UNEXPECTED_ERROR + direction);
         }
     }
 
@@ -61,7 +62,7 @@ public class MarsRover {
             case "E" -> this.direction = "S";
             case "S" -> this.direction = "W";
             case "W" -> this.direction = "N";
-            default -> throw new IllegalStateException("Unexpected value: " + direction);
+            default -> throw new IllegalStateException(UNEXPECTED_ERROR + direction);
         }
     }
 
@@ -71,7 +72,7 @@ public class MarsRover {
             case "S" -> this.y -= 1;
             case "E" -> this.x += 1;
             case "W" -> this.x -= 1;
-            default -> throw new IllegalStateException("Unexpected value: " + direction);
+            default -> throw new IllegalStateException(UNEXPECTED_ERROR + direction);
         }
     }
 
@@ -81,7 +82,7 @@ public class MarsRover {
             case "S" -> this.y += 1;
             case "E" -> this.x -= 1;
             case "W" -> this.x += 1;
-            default -> throw new IllegalStateException("Unexpected value: " + direction);
+            default -> throw new IllegalStateException(UNEXPECTED_ERROR + direction);
         }
     }
 }

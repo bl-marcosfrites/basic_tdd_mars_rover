@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class MarsRoverTest {
 
     @Test
-    public void test01_getPosition() {
+    void test01_GetPosition() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         assertEquals(1, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -18,7 +18,7 @@ class MarsRoverTest {
     }
 
     @Test
-    public void test02_getPosition() {
+    void test02_GetPosition() {
         MarsRover marsRover = new MarsRover(2,1,"N");
         assertEquals(2, marsRover.getX());
         assertEquals(1, marsRover.getY());
@@ -26,75 +26,75 @@ class MarsRoverTest {
     }
 
     @Test
-    public void test03_isValidPosition() {
+    void test03_IsValidPosition() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         assertTrue(marsRover.validatePosition(1, 1, "N"));
     }
 
     @Test
-    public void test04_isNotValidPosition() {
+    void test04_IsNotValidPosition() {
         MarsRover marsRover = new MarsRover(2,1,"N");
         assertFalse(marsRover.validatePosition(1, 1, "N"));
     }
 
     @Test
-    public void test05_isValidPositionWhenMoveForward() {
+    void test05_IsValidPositionWhenMoveForward() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.move("f");
         assertTrue(marsRover.validatePosition(1, 2, "N"));
     }
 
     @Test
-    public void test06_IsValidPositionWhenMoveBackward() {
+    void test06_IsValidPositionWhenMoveBackward() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.move("b");
         assertTrue(marsRover.validatePosition(1, 0, "N"));
     }
 
     @Test
-    public void test07_IsValidPositionWhenTurnLeft() {
+    void test07_IsValidPositionWhenTurnLeft() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.move("l");
         assertTrue(marsRover.validatePosition(1, 1, "W"));
     }
 
     @Test
-    public void test08_IsValidPositionWhenTurnRight() {
+    void test08_IsValidPositionWhenTurnRight() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.move("r");
         assertTrue(marsRover.validatePosition(1, 1, "E"));
     }
 
     @Test
-    public void test09_IsValidPositionWhenReceiveAnOrderWithCapitalLetter() {
+    void test09_IsValidPositionWhenReceiveAnOrderWithCapitalLetter() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.move("F");
         assertTrue(marsRover.validatePosition(1, 2, "N"));
     }
 
     @Test
-    public void test10_IsValidPositionWhenReceiveTwoOrders() {
+    void test10_IsValidPositionWhenReceiveTwoOrders() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.movementOrders("fb");
         assertTrue(marsRover.validatePosition(1, 1, "N"));
     }
 
     @Test
-    public void test11_IsValidPositionWhenReceiveThreeOrders() {
+    void test11_IsValidPositionWhenReceiveThreeOrders() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.movementOrders("lfr");
         assertTrue(marsRover.validatePosition(0, 1, "N"));
     }
 
     @Test
-    public void test12_IsValidPositionWhenReceiveTenOrders() {
+    void test12_IsValidPositionWhenReceiveTenOrders() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.movementOrders("ffrfflfrff");
         assertTrue(marsRover.validatePosition(5, 4, "E"));
     }
 
     @Test
-    public void test13_IsValidPositionWhenReceiveSixOrders() {
+    void test13_IsValidPositionWhenReceiveSixOrders() {
         MarsRover marsRover = new MarsRover(1,1,"N");
         marsRover.movementOrders("fbblrr");
         assertTrue(marsRover.validatePosition(1, 0, "E"));

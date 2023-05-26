@@ -1,38 +1,36 @@
-﻿using Microsoft.VisualBasic;
-
-namespace mars_rovers_tdd_csharp.models;
+﻿namespace mars_rovers_tdd_csharp.models;
 
 public class MarsRover
 {
-    public int x;
-    public int y;
-    public string direction;
+    private int _coordinateX;
+    private int _coordinateY;
+    private string _direction;
     
-    public MarsRover(int x, int y, string direction)
+    public MarsRover(int coordinateX, int coordinateY, string direction)
     {
-        this.x = x;
-        this.y = y;
-        this.direction = direction;
+        this._coordinateX = coordinateX;
+        this._coordinateY = coordinateY;
+        this._direction = direction;
     }
     
     public int GetX()
     {
-        return x;
+        return _coordinateX;
     }
     
     public int GetY()
     {
-        return y;
+        return _coordinateY;
     }
     
     public string GetDirection()
     {
-        return direction;
+        return _direction;
     }
     
     public bool ValidatePosition(int x, int y, string direction)
     {
-        return this.x == x && this.y == y && this.direction == direction;
+        return this._coordinateX == x && this._coordinateY == y && this._direction == direction;
     }
 
     public void MovementOrders(string movementOrders)
@@ -49,16 +47,16 @@ public class MarsRover
         switch (movement.ToLower())
         {
             case "f":
-                MoveForward(direction);
+                MoveForward(_direction);
                 break;
             case "b":
-                MoveBackward(direction);
+                MoveBackward(_direction);
                 break;
             case "l":
-                TurnLeft(direction);
+                TurnLeft(_direction);
                 break;
             case "r":
-                TurnRight(direction);
+                TurnRight(_direction);
                 break;
             default:
                 throw new ArgumentException($"Invalid movement: {movement}");
@@ -70,16 +68,16 @@ public class MarsRover
         switch (direction)
         {
             case "N":
-                this.direction = "W";
+                this._direction = "W";
                 break;
             case "W":
-                this.direction = "S";
+                this._direction = "S";
                 break;
             case "S":
-                this.direction = "E";
+                this._direction = "E";
                 break;
             case "E":
-                this.direction = "N";
+                this._direction = "N";
                 break;
             default:
                 throw new ArgumentException($"Invalid direction: {direction}");
@@ -91,16 +89,16 @@ public class MarsRover
         switch (direction)
         {
             case "N":
-                this.direction = "E";
+                this._direction = "E";
                 break;
             case "E":
-                this.direction = "S";
+                this._direction = "S";
                 break;
             case "S":
-                this.direction = "W";
+                this._direction = "W";
                 break;
             case "W":
-                this.direction = "N";
+                this._direction = "N";
                 break;
             default:
                 throw new ArgumentException($"Invalid direction: {direction}");
@@ -112,16 +110,16 @@ public class MarsRover
         switch (direction)
         {
             case "N":
-                y++;
+                _coordinateY++;
                 break;
             case "E":
-                x++;
+                _coordinateX++;
                 break;
             case "S":
-                y--;
+                _coordinateY--;
                 break;
             case "W":
-                x--;
+                _coordinateX--;
                 break;
             default:
                 throw new ArgumentException($"Invalid direction: {direction}");
@@ -133,16 +131,16 @@ public class MarsRover
         switch (direction)
         {
             case "N":
-                y--;
+                _coordinateY--;
                 break;
             case "E":
-                x--;
+                _coordinateX--;
                 break;
             case "S":
-                y++;
+                _coordinateY++;
                 break;
             case "W":
-                x++;
+                _coordinateX++;
                 break;
             default:
                 throw new ArgumentException($"Invalid direction: {direction}");
